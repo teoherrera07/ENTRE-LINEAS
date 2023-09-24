@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/productDetailStyle.css">
+        <title>Perfil usuario</title>
+    </head>
+<body>
+  <%- include('../partials/header_login') %>
+  <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
+  <div class="complete-conteiner">
+  <main>
+      <section class="profile">
+        <h2 id="saludo">Hola <%= user.first_name %></h2>
+        <div class="avatar">
+            <img src="/images/users/<%= user.avatar %>" alt="imagen de perfil">
+        </div>
+        <p><%= user.email %></p>
+      </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+  </div>
+</body>
+</html>

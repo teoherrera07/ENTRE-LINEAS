@@ -1,0 +1,50 @@
+<header>
+    <section class="top-bar">
+      <!-- Agrego esta div para hacer el efecto degradado del background -->
+      <div class="color-change-2x">
+      <h3>20% de descuento pagando en efectivo</h3>
+      </div>
+    </section>
+
+    <section class="main-header">
+      <div class="menu-hamburquesa">
+        <i class="fa fa-bars burger"></i>
+      </div>
+      <div class="main-logo">
+        <!-- a href al logo para volver a la página de inicio -->
+        <a href="/"><img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas"></a>
+      </div>
+      <div class="search-form">
+        <form method="get" action="#">
+          <label for="search-bar">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+          </label>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    <div class="carrito">
+      <a href="../products/cart"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <div class="login">
+       <!--codigo para comparar nombre de usuario con el que hay en session y mostrarlo-->
+       
+        <!-- <a href="../users/login"><i class="fas fa-user-circle"></i></a> -->
+
+        <p><%= user.first_name %></p>
+        <a href="../users/logout">Logout</a>
+    </div>
+    <nav class="main-nav">
+      <!-- Anclas a sectores de esta página -->
+      <a href="#">Temática</a>
+      <a href="/#novedades">Novedades</a>
+      <a href="/#mas-vendidos">Más vendidos</a>
+      <a href="/#sagas">Sagas</a>
+      <a href="/#packs">Packs</a>
+    </nav>
+    </section>
+    <!-- Borde inferior del header con degradez de colores -->
+    <div class="color-change-2x">
+      <div class="color-border"></div>
+    </div>
+
+  </header>

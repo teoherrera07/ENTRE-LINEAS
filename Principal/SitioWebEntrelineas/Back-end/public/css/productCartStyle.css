@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+/* header fijo */
+header {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+}
+/* animación del top-bar */
+header section.top-bar div.color-change-2x {
+    width: 100%;
+	-webkit-animation: color-change-2x 4s linear infinite alternate both;
+	        animation: color-change-2x 4s linear infinite alternate both;
+}
+header section.top-bar h3{
+    color: #faf3dd;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    width: 100%; 
+}
+section.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+i {
+    font-size: 1.2em;
+}
+div.menu-hamburquesa {
+    width: 10%;
+    text-align: center;
+}
+div.menu-hamburquesa i{
+    color: #7caa98;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+.main-logo {
+    width: 45%;
+    max-width: 290px;
+}
+.main-logo img {
+    width: 100%;
+}
+
+section div.search-form {
+    display: flex;
+    align-items: center;
+}
+
+section div.search-form form input{
+    display: none;
+}
+section div.search-form form button {
+    background-color: white;
+    border: 0px;
+}
+nav.main-nav {
+    display: none;
+}
+
+nav.main-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* animación del borde inferior del header */
+div.color-change-2x div.color-border {
+    width: 90%;
+    height: 3px;
+    margin: auto;
+    margin-top: 10px;
+	-webkit-animation: color-change-2x 4s linear infinite alternate both;
+	        animation: color-change-2x 4s linear infinite alternate both;
+}
+/* Estilo del contenedor del main y del footer */
+div.complete-conteiner {
+    position: absolute;
+    z-index: -10;
+    top: 120px;
+    width: 100%;
+}
+
+.product-img{
+    margin: 10px;
+    width: 80%;
+    height: 80%;
+    max-width: 250px;
+}
+.image{
+    text-align: center;
+}
+.description{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.productImg-contain{
+    display: flex;
+    justify-content: center;
+}
+
+.button-contain{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border-color: #769ECB;
+    color: white;
+    background-color: #9DBAD5;   
+    font-size: 15px;
+}
+
+.productCart-contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px black;
+    margin: 40px;
+    box-shadow: 0 2px 4px 0 #818181
+}
+
+.contador{
+    border: solid 2px #769ECB;
+    width: 50px;
+    padding: 2px;
+    margin: 5px;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del footer */
+footer div.conteiner {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #faf3dd;
+    padding: 10px;
+}
+footer div.conteiner div.footer-item {
+    padding: 5px 0px;
+    width: 25%;
+}
+footer div.conteiner div.footer-item ul {
+    text-decoration: none;
+}
+
+@media (min-width:740px){
+    .product-img{
+        max-width: 250px;
+        width: 90%;
+    }
+    /* para posicionar el contenedor */
+    div.complete-conteiner {
+        top: 170px;
+    }
+}
+
+@media (min-width:980px){
+    div.menu-hamburquesa {
+        display: none;
+    }
+    section div.search-form {
+        width: 45%;
+    }
+    section div.search-form form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    section div.search-form form label {
+        width: 90%;
+    }
+    section div.search-form form label input{
+        background-color: #faf3dd;
+        border: 1px solid #7caa98;
+        outline: none;
+        color: #666;
+        padding: 2px;
+        width: 100%;
+        display: flex;
+    } 
+    section div.search-form form i {
+        background-color: white;
+        border: 0px;
+    }
+    nav.main-nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    main{
+        margin: 20px 50px;
+    }
+
+    .productCart-contain{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        border: solid 2px black;
+        margin: 10px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 2px 4px 0 #818181
+    }
+    .product-img{
+        max-width: 250px;
+        width: 100%;
+    }
+    .description{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+       /* para alinear footer */
+    footer div.conteiner {
+        width: 100vw;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-8-12 10:18:16
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation color-change-2x
+ * ----------------------------------------
+ */
+ @-webkit-keyframes color-change-2x {
+    0% {
+      background-color: #c8d6b9;
+    }
+    33% {
+        background-color: #8fc1a9;
+    }
+    66% {
+        background-color: #9dbad5;
+    }
+
+    100% {
+      background-color: #769ECB;
+    }
+  }
+  @keyframes color-change-2x {
+    0% {
+        background-color: #c8d6b9;
+      }
+      33% {
+          background-color: #8fc1a9;
+      }
+      66% {
+          background-color: #9dbad5;
+      }
+  
+      100% {
+        background-color: #769ECB;
+      }
+  }

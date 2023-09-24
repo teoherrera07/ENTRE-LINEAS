@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <title>Login</title>
+</head>
+<body>
+  <header>
+    <section class="top-bar">
+      <!-- Agrego esta div para hacer el efecto degradado del background -->
+      <div class="color-change-2x">
+      <h3>20% de descuento pagando en efectivo</h3>
+      </div>
+    </section>
+
+    <section class="main-header">
+      <div class="menu-hamburquesa">
+        <i class="fa fa-bars burger"></i>
+      </div>
+      <div class="main-logo">
+        <!-- a href al logo para volver a la página de inicio -->
+        <a href="/"><img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas"></a>
+      </div>
+      <div class="search-form">
+        <form method="get" action="#">
+          <label for="search-bar">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+          </label>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    <div class="carrito">
+      <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <div class="login">
+      <a href="login"><i class="fas fa-user-circle"></i></a>
+    </div>
+    <nav class="main-nav">
+      <!-- Anclas a sectores de esta página -->
+      <a href="#">Temática</a>
+      <a href="/#novedades">Novedades</a>
+      <a href="/#mas-vendidos">Más vendidos</a>
+      <a href="/#sagas">Sagas</a>
+      <a href="/#packs">Packs</a>
+    </nav>
+    </section>
+    <!-- Borde inferior del header con degradez de colores -->
+    <div class="color-change-2x">
+      <div class="color-border"></div>
+    </div>
+
+  </header>
+  <main class="login">
+    <div class="login-form">
+    <form action="#" method="post">
+      <label for="user-name">E-mail:</label><br/>
+      <input type="email" id="user-name" name="user-name" required/><br/>
+      <label for="password">Contraseña:</label><br/>
+      <input type="password" name="password" id="password" required/><br/>
+      <div class="check">
+        <input type="checkbox" name="remind-me" id="remind-me"/>
+        <label for="remind-me">Recuérdame</label><br/>
+      </div>
+      <a href="#">¿Olvidó su contraseña?</a><br/>
+      <button type="submit" value="enviar">Enviar</button>
+      <a href="register">
+      <button type="button" value="register">Registrarse</button>
+      </a>
+    </form>
+    </div>
+  </main>
+  <footer>
+    <div class="conteiner">
+
+      <div class="footer-item">
+        <h5>Compras</h5>
+        <ul type="none">
+          <li><small>Búsqueda</small></li>
+          <li><small>Términos del Servicio</small></li>
+          <li><small>Política de Reembolso</small></li>
+        </ul>
+      </div>
+
+      <div class="footer-item">
+        <h5>Atención al Cliente</h5>
+        <ul type="none">
+          <li><small>Contacto</small></li>
+          <li><small>Preguntas frecuentes</small></li>
+          <li><small>Medios de pago</small></li>
+        </ul>
+      </div>
+
+      <div class="footer-item">
+        <h5>Entrelíneas</h5>
+        <ul type="none">
+          <li><small>Quiénes somos</small></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </footer>
+ </body>
+</html>

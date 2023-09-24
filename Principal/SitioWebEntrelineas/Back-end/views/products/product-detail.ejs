@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/productDetailStyle.css">
+        <title><%= libro.title %></title>
+    </head>
+<body>
+    <header>
+        <section class="top-bar">
+          <!-- Agrego esta div para hacer el efecto degradado del background -->
+          <div class="color-change-2x">
+          <h3>20% de descuento pagando en efectivo</h3>
+          </div>
+        </section>
+    
+        <section class="main-header">
+          <div class="menu-hamburquesa">
+            <i class="fa fa-bars burger"></i>
+          </div>
+          <div class="main-logo">
+            <!-- a href al logo para volver a la página de inicio -->
+            <a href="/"><img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas"></a>
+          </div>
+          <div class="search-form">
+            <form method="get" action="#">
+              <label for="search-bar">
+              <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+              </label>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <div class="carrito">
+          <a href="../cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        <div class="login">
+          <a href="../../users/login"><i class="fas fa-user-circle"></i></a>
+        </div>
+        <nav class="main-nav">
+          <!-- Anclas a sectores de esta página -->
+          <a href="#">Temática</a>
+          <a href="/#novedades">Novedades</a>
+          <a href="/#mas-vendidos">Más vendidos</a>
+          <a href="/#sagas">Sagas</a>
+          <a href="/#packs">Packs</a>
+        </nav>
+        </section>
+        <!-- Borde inferior del header con degradez de colores -->
+        <div class="color-change-2x">
+          <div class="color-border"></div>
+        </div>
+    
+      </header>
+  <div class="complete-conteiner">
+    <main>
+      <div class="container">
+        <div class="product-image">
+            <img src="/images/products/<%= libro.image %>" alt="Libro yo, robot"/>
+        </div>
+        <section class="description-sinopsis-list">
+            <div class="product-tittle-price">
+            <h1><%= libro.title %></h1>
+            <h3><%= libro.author %></h3>
+            <span>$ <%= libro.price %></span>
+            </div>
+            <br/>
+            <div class="button-contain">
+              <form action="#" method="GET">
+            
+                <button type="submit" name="button" value="add" class="button">Agregar al carrito</button>
+            
+            </form>
+            
+            <form action="#" method="GET">
+            
+              <button type="submit" name="button" value="buy" class="button">Comprar ahora</button>
+          
+          </form>
+           
+            <form action="../edit/<%= libro.id %>" method="GET">
+            
+                <button type="submit" name="button" value="Editar" class="button">Editar</button>
+            
+            </form>
+            
+            <form action="../delete/<%= libro.id %>?_method=DELETE" method="POST">
+            
+                <button type="submit" name="button" value="Eliminar" class="button">Eliminar</button>
+            
+            </form>
+            </div>
+            <br/>
+            <div class="sinopsis">
+            <h4>Sinopsis</h4>
+            <br/>
+            <p><%= libro.synopsis %></p>
+            </div>
+            <br></br>
+            <div class="ficha">
+            <h4>Ficha técnica</h4>
+              <ul type="none">
+                <li>Edición: <%= libro.edition %></li>
+                <li>Páginas: <%= libro.pages %></li>
+                <li>Idioma: <%= libro.language %></li>
+                <li>Presentación: <%= libro.presentation %></li>
+              </ul>
+            </div>
+        </section>
+        </div>
+        <br></br>
+        <section>
+            <div class="puedeInteresarte">
+            <h3>También puede interesarte...</h3>
+            </div>
+            <br></br>
+            <div class="contain-articles-recomended">
+                <article>
+                    <div>
+                    <img src="/images/products/cianuro-espumoso.jpg" alt="Libro cianuro espumoso"/>
+                    </div>
+                    <div>
+                        <h4>Cianuro espumoso</h4>
+                        <span>$3.780,00</span>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                    <img src="/images/products/despues-de-la-tormenta.jpg" alt="Libro despues de la tormenta"/>
+                    </div>
+                    <div>
+                        <h4>Después de la tormenta</h4>
+                        <span>$3.200,00</span>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                    <img src="/images/products/1984.jpg" alt="Libro 1984"/>
+                    </div>
+                    <div>
+                        <h4>1984</h4>
+                        <span>$2.599,00</span>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                    <img src="/images/products/las-alas-de-sophie.jpg" alt="Libro las alas de Sophie">
+                    </div>
+                    <div>
+                        <h4>Las alas de Sophie</h4>
+                        <span>$3.300,00</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</div>
+</body>
+</html>

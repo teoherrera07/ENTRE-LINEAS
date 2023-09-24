@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/registerStyle.css">
+    <script src="/js/create.js"></script>
+    <title>Agregar producto</title>
+</head>
+<body>
+  <header>
+    <section class="top-bar">
+      <!-- Agrego esta div para hacer el efecto degradado del background -->
+      <div class="color-change-2x">
+      <h3>20% de descuento pagando en efectivo</h3>
+      </div>
+    </section>
+
+    <section class="main-header">
+      <div class="menu-hamburquesa">
+        <i class="fa fa-bars burger"></i>
+      </div>
+      <div class="main-logo">
+        <!-- a href al logo para volver a la página de inicio -->
+        <a href="/"><img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas"></a>
+      </div>
+      <div class="search-form">
+        <form method="get" action="#">
+          <label for="search-bar">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+          </label>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    <div class="carrito">
+      <a href="../cart"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <div class="login">
+      <a href="/users/login"><i class="fas fa-user-circle"></i></a>
+    </div>
+    <nav class="main-nav">
+      <!-- Anclas a sectores de esta página -->
+      <a href="#">Temática</a>
+      <a href="/#novedades">Novedades</a>
+      <a href="/#mas-vendidos">Más vendidos</a>
+      <a href="/#sagas">Sagas</a>
+      <a href="/#packs">Packs</a>
+    </nav>
+    </section>
+    <!-- Borde inferior del header con degradez de colores -->
+    <div class="color-change-2x">
+      <div class="color-border"></div>
+    </div>
+
+  </header>
+    <br/>
+    <main>
+    
+        <h2>AGREGAR PRODUCTO</h2>
+        <br/>
+        <div class="register-form">
+            <form action="/products/create" method="post" enctype="multipart/form-data" id="main_form">
+                <label for="titulo">Título:</label>
+                <input type="text" name="titulo" value="<%= locals.oldData ? oldData.titulo : null %>" id="titulo"/>
+                <span class="errorMessage invisible" id="spanTitulo">¡Hey, debes escribir el titulo del libro!</span>
+                <% if (locals.errors && errors.titulo) {%>
+                  <span class="errorMessage">
+                      <%= errors.titulo.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="autor">Autor:</label>
+                <input type="text" name="autor" value="<%= locals.oldData ? oldData.autor : null %>" id="autor"/>
+                <span class="errorMessage invisible" id="spanAutor">¡Hey, debes escribir el nombre del autor!</span>
+                <% if (locals.errors && errors.autor) {%>
+                  <span class="errorMessage">
+                      <%= errors.autor.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="sinopsis">Sinopsis:</label><br/>
+                <textarea type="text" name="sinopsis" value="<%= locals.oldData ? oldData.sinopsis : null %>" id="sinopsis" placeholder="Resumen del libro..."></textarea>
+                <span class="errorMessage invisible" id="spanSinopsis">¡Hey, debes escribir una descripcion del libro!</span>
+                <% if (locals.errors && errors.sinopsis) {%>
+                  <span class="errorMessage">
+                      <%= errors.sinopsis.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" id="precio"/>
+                <span class="errorMessage invisible" id="spanPrecio">¡Hey, debes escribir un precio de 2 a 5 cifras!</span>
+                <% if (locals.errors && errors.precio) {%>
+                  <span class="errorMessage">
+                      <%= errors.precio.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="imagenProducto">Imagen del producto:</label>
+                <input type="file" name="imagenProducto" value="<%= locals.oldData ? oldData.imagenProducto : null %>" id="imagenProducto">
+                <% if (locals.errors && errors.imagenProducto) {%>
+                  <span class="errorMessage">
+                      <%= errors.imagenProducto.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <h3>Ficha técnica:</h3>
+                <br/>
+                <div class="check">
+                  <p>Género:<p>
+                    <label for="fant"><input type="checkbox" name="topics" value="1" id="fant" >Fantasía</label><br/>
+                    <label for="hist"><input type="checkbox" name="topics" value="2" id="hist">Historia</label><br/>
+                    <label for="cien"><input type="checkbox" name="topics" value="3" id="cien">Ciencia ficción</label><br/>
+                    <label for="roma"><input type="checkbox" name="topics" value="4" id="roma">Romance</label><br/>
+                    <label for="polit"><input type="checkbox" name="topics" value="5" id="polit">Política</label><br/>
+                    <label for="dram"><input type="checkbox" name="topics" value="6" id="dram">Drama</label><br/>
+                    <label for="polic"><input type="checkbox" name="topics" value="7" id="polic">Policial</label><br/>
+                    <label for="econ"><input type="checkbox" name="topics" value="8" id="econ">Economía</label><br/>
+                    <label for="terr"><input type="checkbox" name="topics" value="9" id="terr">Terror</label><br/>
+                    <label for="susp"><input type="checkbox" name="topics" value="10" id="susp">Suspenso</label><br/>
+                    <label for="auto"><input type="checkbox" name="topics" value="11" id="auto">Autoayuda</label><br/>
+                    <% if (locals.errors && errors.topics) {%>
+                      <span class="errorMessage">
+                          <%= errors.topics.msg %>
+                      </span>
+                    <%}%>
+                  </div>
+                <br/>
+                <label for="edicion">Edición:</label>
+                <input type="number" name="edicion" value="<%= locals.oldData ? oldData.edicion : null %>" id="edicion"/>
+                <span class="errorMessage invisible" id="spanEdicion">¡Hey, ¿Que edicion es el libro?!</span>
+                <% if (locals.errors && errors.edicion) {%>
+                  <span class="errorMessage">
+                      <%= errors.edicion.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="paginas">Páginas:</label>
+                <input type="number" name="paginas" value="<%= locals.oldData ? oldData.paginas : null %>" id="paginas"/>
+                <span class="errorMessage invisible" id="spanPaginas">¡Hey, ¿Cuantas paginas tiene el libro?!</span>
+                <% if (locals.errors && errors.paginas) {%>
+                  <span class="errorMessage">
+                      <%= errors.paginas.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="idioma">Idioma:</label>
+                <input type="text" name="idioma" value="<%= locals.oldData ? oldData.idioma : null %>" id="idioma"/>
+                <span class="errorMessage invisible" id="spanIdioma">¡Hey, ¿Cual es el idioma del libro?!</span>
+                <% if (locals.errors && errors.idioma) {%>
+                  <span class="errorMessage">
+                      <%= errors.idioma.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <label for="presentacion">Presentación:</label>
+                <input type="text" name="presentacion" value="<%= locals.oldData ? oldData.presentacion : null %>" id="presentacion"/>
+                <span class="errorMessage invisible" id="spanPresentacion">¡Hey, ¿Cual es la precentacion del libro?!</span>
+                <% if (locals.errors && errors.presentacion) {%>
+                  <span class="errorMessage">
+                      <%= errors.presentacion.msg %>
+                  </span>
+                <%}%>
+                <br/>
+                <div class="checkbox-box">
+                  <label for="novedades">Novedades</label>
+                  <input type="checkbox" name="categories" value="1" id="novedades">
+                  <label for="masVendidos">| Más Vendidos</label>
+                  <input type="checkbox" name="categories" value="2" id="masVendidos">
+                  <label for="sagas">| Sagas</label>
+                  <input type="checkbox" name="categories" value="3" id="sagas">
+                  <label for="packs">| Packs</label>
+                  <input type="checkbox" name="categories" value="4" id="packs">
+                </div>
+                <br/>
+                <button type="submit" value="add">Agregar producto</button>
+                <span class="errorMessage invisible" id="span--submit">¡Hey, debes completar el formulario!</span>
+            </form>
+        </div>
+    
+    </main>
+    <%- include('../partials/footer') %>
+</body>

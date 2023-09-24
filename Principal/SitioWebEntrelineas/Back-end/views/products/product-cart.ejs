@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/productCartStyle.css">
+        <title>Mi Carrito</title>
+    </head>
+<body>
+  <%- include('../partials/header') %>
+      <div class="complete-conteiner">
+    <main>
+        <div class="productCart-contain">
+            <div class="image">
+                <img src="/images/products/cianuro-espumoso.jpg" alt="Libro cianuro espumoso" class="product-img">
+            </div>
+            <div class="description">
+                <div class="product-tittle">
+                    <h2>Cianuro espumoso</h2>
+                </div>
+                <div class="contador">
+                    <h3>- 1 +</h3>
+                </div>
+                <div class="subtotal">
+                    <p>1 x $1.900,00</p>
+                    <p>Subtotal $1.900,00</p>
+                </div>
+                <br>
+                <div class="total">
+                    <h3>Total: $1.900,00</h3>
+                </div>
+                <br>
+                <div class="button-contain">
+                    <input type="submit" name="button" value="Comprar" class="button">
+                </div>
+            </div>
+        </div>
+    </main>
+    <br>
+    <%- include('../partials/footer') %>
+    </div>
+</body>

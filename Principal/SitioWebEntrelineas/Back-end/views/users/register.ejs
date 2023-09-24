@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/registerStyle.css">
+    <script src="/js/registercompleto.js"></script>
+    <title>Registrarse</title>
+</head>
+<body>
+  <%- include('../partials/header') %>
+    <br/>
+    <main>
+        <h2>¡Registrate y formá parte del Club Entrelíneas!</h2>
+        <br/>
+        <div class="register-form">
+        <form action="" method="post" enctype="multipart/form-data" id="main_form">
+            <label for="first_name">Nombre:</label><br/>
+            <input type="text" name="first_name" value="<%= locals.oldData ? oldData.first_name : null %>" id="first_name"/>
+            <span class="errorMessage invisible" id="span--first_name">¡Hey, debes escribir tu nombre!</span>
+              
+          
+            <% if (locals.errors && errors.first_name) {%>
+              <span class="errorMessage">
+                  <%= errors.first_name.msg %>
+              </span>
+            <%}%>
+            <br/>
+            <label for="last_name">Apellido:</label><br/>
+            <input type="text" name="last_name" value="<%= locals.oldData ? oldData.last_name : null %>" id="last_name"/>
+            <span class="errorMessage invisible" id="span--last_name">¡Hey, debes escribir tu apellido!</span>
+            <% if (locals.errors && errors.last_name) {%>
+              <span class="errorMessage">
+                  <%= errors.last_name.msg %>
+              </span>
+            <%}%>
+            <br/>
+            <label for="avatar">Foto de perfil:</label><br/>
+            <input type="file" name="avatar" id="avatar"/>
+            <% if (locals.errors && errors.avatar) {%>
+              <span class="errorMessage">
+                  <%= errors.avatar.msg %>
+              </span>
+            <%}%>
+            <br/>          
+            <label for="user">Usuario:</label><br/>
+            <input type="text" name="user" value="<%= locals.oldData ? oldData.user : null %>" id="user"/>
+            <span class="errorMessage invisible" id="span--user">¡El usuario debe tener entre 5 y 10 caracteres!</span>
+            <% if (locals.errors && errors.user) {%>
+              <span class="errorMessage">
+                  <%= errors.user.msg %>
+              </span>
+            <%}%>
+            <br>
+            <label for="email">Email:</label><br/>
+            <input type="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" id="email"/>
+            <span class="errorMessage invisible" id="span--email">¡Debe ser un email válido!</span>
+            <% if (locals.errors && errors.email) {%>
+              <span class="errorMessage">
+                  <%= errors.email.msg %>
+              </span>
+            <%}%>
+            <br>
+            <label for="password">Contraseña:</label><br/>
+            <input type="password" name="password" id="password"/>
+            <span class="errorMessage invisible" id="span--password">¡La contraseña debe tener entre 6 y 12 caracteres!</span>
+            <% if (locals.errors && errors.password) {%>
+              <span class="errorMessage">
+                  <%= errors.password.msg %>
+              </span>
+            <%}%>
+            <br>
+            <label for="country">País:</label>
+            <select name="country" value="<%= locals.oldData ? oldData.country : null %>" id="country">
+                <option value="">--</option>
+                <option value=1 <%= (locals.oldData && oldData.country === 'Argentina')? 'selected': ''%> >Argentina</option>
+                <option value=2 <%= (locals.oldData && oldData.country === 'Bolivia')? 'selected': ''%> >Bolivia</option>
+                <option value=3 <%= (locals.oldData && oldData.country === 'Chile')? 'selected': ''%> >Chile</option>
+                <option value=4 <%= (locals.oldData && oldData.country === 'Colombia')? 'selected': ''%> >Colombia</option>
+                <option value=5 <%= (locals.oldData && oldData.country === 'Ecuador')? 'selected': ''%> >Ecuador</option>
+                <option value=6 <%= (locals.oldData && oldData.country === 'Peru')? 'selected': ''%> >Perú</option>
+                <option value=7 <%= (locals.oldData && oldData.country === 'Uruguay')? 'selected': ''%> >Uruguay</option>
+                <option value=8 <%= (locals.oldData && oldData.country === 'Venezuela')? 'selected': ''%> >Venezuela</option>
+            </select>
+            <% if (locals.errors && errors.country) {%>
+              <span class="errorMessage">
+                  <%= errors.country.msg %>
+              </span>
+            <%}%>
+            <br>
+            <div class="check">
+            <p>Me interesa...<p>
+              <label for="fant"><input type="checkbox" name="genlit" value="1"  id="fant" >Fantasía</label><br/>
+              <label for="hist"><input type="checkbox" name="genlit" value="2" id="hist">Historia</label><br/>
+              <label for="cien"><input type="checkbox" name="genlit" value="3" id="cien">Ciencia ficción</label><br/>
+              <label for="roma"><input type="checkbox" name="genlit" value="4" id="roma">Romance</label><br/>
+              <label for="polit"><input type="checkbox" name="genlit" value="5" id="polit">Política</label><br/>
+              <label for="dram"><input type="checkbox" name="genlit" value="6" id="dram">Drama</label><br/>
+              <label for="polic"><input type="checkbox" name="genlit" value="7" id="polic">Policial</label><br/>
+              <label for="econ"><input type="checkbox" name="genlit" value="8" id="econ">Economía</label><br/>
+              <label for="terr"><input type="checkbox" name="genlit" value="9" id="terr">Terror</label><br/>
+              <label for="susp"><input type="checkbox" name="genlit" value="10" id="susp">Suspenso</label><br/>
+              <label for="auto"><input type="checkbox" name="genlit" value="11" id="auto">Autoayuda</label><br/>
+            </div>
+            <button type="reset" value="borrar">Borrar</button>
+            <button type="submit" value="registrarse" id="submit">Registrarse</button>
+            <span class="errorMessage invisible" id="span--submit">¡Hey, debes completar el formulario!</span>
+        </div>
+        </form>
+    </main>
+    <%- include('../partials/footer') %>
+</body>

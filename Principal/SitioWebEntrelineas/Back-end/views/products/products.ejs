@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+  <%- include('../partials/header') %>
+  <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
+  <div class="complete-conteiner">
+  <main>
+      <section class="product">
+        <h2>Listado de Productos</h2>
+        <% product.forEach(product => { %> 
+        <%- include('../partials/product-item', {product})%>
+        <% } )%> 
+      </section>
+
+
+  </main>
+
+  <%- include('../partials/footer') %>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+  
+  <%- include('./partials/header') %>
+ 
+
+  <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
+  <div class="complete-conteiner">
+  <main>
+      <section class="product">
+        
+          <% for (let i=0 ; i < categories.length; i++){%>
+            <h2><%= categories[i].name %></h2>
+            <% for (let j=0 ; j < categories[i].products.length ; j++){%>
+            <article class="product-box">
+              <div class="product-img"> 
+                <a href="products/detail/<%= categories[i].products[j].id %>"><img src="images/products/<%=categories[i].products[j].image%>" alt="<%=categories[i].products[j].title %>"/></a>
+              </div>
+              <div class="product-title">
+                <h4><%= categories[i].products[j].title %></h4>
+                <span>$ <%= categories[i].products[j].price %></span>
+              </div>            
+            </article>
+
+            <% } %>
+
+          <% } %>
+        
+     </section>
+
+  </main>
+  <%- include('./partials/footer') %>
+  </div>
+</body>
+</html>

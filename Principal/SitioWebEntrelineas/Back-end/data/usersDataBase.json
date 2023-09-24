@@ -1,0 +1,180 @@
+[
+ {
+  "id": 1663961083105,
+  "first_name": "Bob",
+  "last_name": "Esponja",
+  "user": "BS",
+  "email": "bobesponja@hotmail.com",
+  "password": "12345",
+  "country": "Argentina",
+  "genlit": [
+   "Historia",
+   "Autoayuda"
+  ],
+  "avatar": "1663961083096bob_esponja.jpg"
+ },
+ {
+  "id": 1663961201224,
+  "first_name": "Cerebro",
+  "last_name": "Smart",
+  "user": "CS",
+  "email": "cerebre-smart@gmail.com",
+  "password": "abcd",
+  "country": "Venezuela",
+  "genlit": [
+   "Historia",
+   "Ciencia ficción",
+   "Terror"
+  ],
+  "avatar": "1663961201213Cerebro.jpg"
+ },
+ {
+  "id": 1663961280773,
+  "first_name": "Shrek",
+  "last_name": "Ogro",
+  "user": "SO",
+  "email": "ogro-sherk@gmail.com",
+  "password": "pantano",
+  "country": "Colombia",
+  "genlit": [
+   "Fantasía",
+   "Suspenso"
+  ],
+  "avatar": "1663961280763shrek.jpg"
+ },
+ {
+  "id": 1663962620037,
+  "first_name": "Raymundo",
+  "last_name": "Martinez",
+  "user": "Raymond123",
+  "email": "raymar@gmail.com",
+  "password": "Raymond123",
+  "country": "Colombia",
+  "genlit": [
+   "Fantasía",
+   "Ciencia ficción",
+   "Drama",
+   "Policial",
+   "Terror"
+  ],
+  "avatar": "1663962620005189f977025937e729da46b1cc98f8189.jpg"
+ },
+ {
+  "id": 1663962750266,
+  "first_name": "Susan",
+  "last_name": "Ahoria",
+  "user": "Susi",
+  "email": "Susiahoria@gmail.com",
+  "password": "Susana123",
+  "country": "Bolivia",
+  "genlit": [
+   "Historia",
+   "Romance",
+   "Política",
+   "Economía",
+   "Autoayuda"
+  ],
+  "avatar": "1663962750262zanahoria.jfif"
+ },
+ {
+  "id": 1663963055826,
+  "first_name": "Milton",
+  "last_name": "Heladas",
+  "user": "MiltonHela",
+  "email": "miltonheladas@gmail.com",
+  "password": "milton123",
+  "country": "Bolivia",
+  "genlit": [
+   "Fantasía",
+   "Historia",
+   "Política"
+  ],
+  "avatar": "1663963055823milton.jpg"
+ },
+ {
+  "id": 1663963167192,
+  "first_name": "Yamile",
+  "last_name": "Perdomo",
+  "user": "Yamipe",
+  "email": "ya.per@dio.com",
+  "password": "yaperdio",
+  "country": "Ecuador",
+  "genlit": [
+   "Fantasía",
+   "Historia",
+   "Política"
+  ],
+  "avatar": "default-image.jpg"
+ },
+ {
+  "id": 1663968276322,
+  "first_name": "Para",
+  "last_name": "Probar",
+  "user": "para probar",
+  "email": "siquesi@gmail.com",
+  "password": "$2a$10$f9dfuHHQy46DSMIVGc.jOOzSap2iAGFwaT6f62K1J4WiD3IeWqNVG",
+  "country": "Argentina",
+  "avatar": "1663968276319jake el perro.jfif"
+ },
+ {
+  "id": 1664577294630,
+  "first_name": "Miguel",
+  "last_name": "Suarez",
+  "user": "migue07",
+  "email": "miguel@gmail.com",
+  "password": "$2a$10$KrII9vVHSrlW0O6.ba1Zcu00iXPyx8lK8S.K49NZp4PGIGqymDSFy",
+  "country": "Bolivia",
+  "avatar": "1664577294612-1984.jpg"
+ },
+ {
+  "id": 1664747016332,
+  "first_name": "val",
+  "last_name": "Daza",
+  "user": "valDaza",
+  "email": "valdaza@gmail.com",
+  "password": "$2a$10$k7ZIE66aR3CGUNlyCKAL..sbyPCEVZHo4I4wYo7nnuR/lZHRObspa",
+  "country": "Colombia",
+  "avatar": "1664747016303-Sign-Up1.jpg"
+ },
+ {
+  "id": 1664975184186,
+  "first_name": "Laura",
+  "last_name": "Elías",
+  "user": "LauElías",
+  "email": "eliasmarialaura@gmail.com",
+  "password": "$2a$10$xq3krRtbJxgGrmckVOMz8.LduIRf20W.FkuXcy/dbWtdX9tytpPPC",
+  "country": "Argentina",
+  "genlit": [
+   "Fantasia",
+   "Historia"
+  ],
+  "avatar": "1664975184168-perfil proyecto.jpg"
+ },
+ {
+  "id": 1665013406913,
+  "first_name": "teo",
+  "last_name": "herrera",
+  "user": "teoherrera",
+  "email": "teoh@gmail.com",
+  "password": "$2a$10$CCCX2UCRJTi9TfKdId04BuD9KdxVYTIMOiNASb0sowBshVWbH1K2e",
+  "country": "Colombia",
+  "genlit": [
+   "Fantasia",
+   "Ciencia ficción",
+   "Terror",
+   "Suspenso"
+  ],
+  "avatar": "1665013406880-IMG-20131015-WA0001.jpg"
+ },
+ {
+  "id": 1665108859249,
+  "first_name": "josema",
+  "last_name": "alvarez",
+  "user": "josema",
+  "email": "josema@gmail.com",
+  "password": "$2a$10$7aBvJZDvXTMjOfOX5wOg/uLPSiCPHuT1oFpJYBIDPJBIl1H2t1Jhe",
+  "country": "Argentina",
+  "genlit": "Fantasia",
+  "avatar": "1665108859198-astronauta.jpg"
+ }
+]
